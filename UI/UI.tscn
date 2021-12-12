@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/Control.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.282353, 0.545098, 0.313726, 0.733333 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.698039, 0.0784314, 0.0784314, 0.682353 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.972549, 0, 0, 0.670588 )
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 485.0
+margin_right = 1026.0
+margin_bottom = 560.0
+color = Color( 0, 0, 0, 0.831373 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+margin_left = 528.0
+margin_top = 537.0
+margin_right = 1021.0
+margin_bottom = 576.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 100.0
+rounded = true
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar2" type="ProgressBar" parent="Control"]
+margin_left = 102.546
+margin_top = 49.0744
+margin_right = 496.546
+margin_bottom = 72.0744
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 100.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 834.997
+margin_top = 483.502
+margin_right = 1025.0
+margin_bottom = 522.502
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "Shoot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]

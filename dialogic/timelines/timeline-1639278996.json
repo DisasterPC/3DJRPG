@@ -1,0 +1,48 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1639275020.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1639275020.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You have bested me... I didn't think it was possible"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1639275020.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You Win!"
+		},
+		{
+			"change_scene": "res://Ending/Ending.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1639278996.json",
+		"name": "battleWin"
+	}
+}
